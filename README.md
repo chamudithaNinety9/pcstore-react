@@ -1,19 +1,40 @@
 Overview
+PC-Store is a full-stack e-commerce web application designed for buying and selling computer products, including laptops and printers. Built with a focus on clean code and best practices, PC-Store ensures a seamless shopping experience for users. 
+The backend is implemented in Spring Boot, providing robust API endpoints for managing products and printers. The frontend is developed using React, offering a responsive and intuitive user interface.
 
-PC-Store is a full-stack e-commerce web application designed for buying and selling a variety of computer products, including laptops, desktops, peripherals, and accessories. Built using Spring Boot for the backend and React for the frontend, PC-Store provides a seamless shopping experience with essential features for both customers and administrators.
 
 Key Features
+PC-Store allows users to browse and search products by name, category, or brand. 
+It supports CRUD operations for both products and printers, facilitating easy management. The admin dashboard is secured with authentication and authorization, ensuring only authorized users can perform administrative tasks. The application features secure image uploads for product and printer images, enhancing user experience and performance.
 
-PC-Store offers a comprehensive product catalog where users can browse and search for products with detailed information, such as name, brand, category, price, and images. The catalog also allows for filtering by category or brand to help users find exactly what they need. The application includes an admin dashboard that facilitates product management, enabling administrators to perform CRUD operations (create, read, update, delete) on products. This admin section is secured with authentication and authorization to ensure that only authorized users can access it.
+API and Endpoints
 
-The platform supports secure image uploads, allowing administrators to upload product images that are stored and served efficiently to optimize performance. Users can take advantage of the robust search functionality to find products by name, category, or brand, complete with autocomplete suggestions and advanced filtering options.
+PC-Store uses RESTful API endpoints to manage products and printers:
 
-PC-Store features a dedicated "Contact Us" page where users can contact support and view company details, with a form for submitting inquiries and feedback.
+* Products API:
+    GET /products: Fetch all products.
+    POST /products/create: Create a new product.
+    GET /products/{id}: Fetch a product by ID.
+    PUT /products/edit/{id}: Update a product.
+    DELETE /products/delete/{id}: Delete a product.
 
-Tech Stack
-
-The frontend of PC-Store is built using React, a popular library for creating user interfaces, along with Material-UI for material design components and React Router for routing. The backend is powered by Spring Boot, a framework that simplifies the development of Java-based backend applications, and Spring Data JPA for database interactions and object-relational mapping. The application uses MySQL as its relational database management system.
+* Printers API:
+    GET /printers: Fetch all printers.
+    POST /printers/create: Create a new printer.
+    GET /printers/{id}: Fetch a printer by ID.
+    PUT /printers/edit/{id}: Update a printer.
+    DELETE /printers/delete/{id}: Delete a printer.
 
 Challenges & Learnings
+Integrating React with Spring Boot presented challenges, particularly in managing state and optimizing communication between frontend and backend. 
+Overcoming CORS issues and ensuring efficient API endpoint design were significant learning points. 
+Implementing secure image uploads and handling authentication and authorization securely further enriched the development experience.
 
-Integrating React with Spring Boot was a significant challenge, particularly in managing state and ensuring efficient communication between the frontend and backend. This process involved overcoming CORS issues and optimizing API endpoints for better performance.
+Best Practices of Coding
+PC-Store adheres to best practices of coding, ensuring:
+* Modular and Scalable Architecture: Separation of concerns between frontend and backend components for maintainability and scalability.
+* Clean Code: Well-structured and readable code with meaningful variable names, comments, and consistent formatting.
+* Error Handling: Proper error handling and validation to ensure robustness and reliability.
+* Security: Implementation of secure practices, including data validation, input sanitization, and protection against common vulnerabilities.
+* Code Ethics: Adherence to ethical standards in coding, promoting inclusivity, transparency, and respect for user privacy.
+
