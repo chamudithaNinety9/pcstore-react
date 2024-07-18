@@ -1,19 +1,48 @@
-Overview
+PC-Store
 
-PC-Store is a full-stack e-commerce web application designed for buying and selling a variety of computer products, including laptops, desktops, peripherals, and accessories. Built using Spring Boot for the backend and React for the frontend, PC-Store provides a seamless shopping experience with essential features for both customers and administrators.
+PC-Store is a full-stack e-commerce web application designed for buying and selling a variety of computer products, including laptops, desktops, peripherals, and accessories. 
+Built using Spring Boot for the backend and React for the frontend, PC-Store provides a seamless shopping experience with essential features for both customers.
+
+Project Description
+
+PC-Store is an e-commerce platform that allows users to browse, search, and purchase computer-related products. 
+The application offers an extensive product catalog with detailed information, an admin dashboard for managing products, secure image uploads, a robust search functionality.
 
 Key Features
-
-PC-Store offers a comprehensive product catalog where users can browse and search for products with detailed information, such as name, brand, category, price, and images. The catalog also allows for filtering by category or brand to help users find exactly what they need. The application includes an admin dashboard that facilitates product management, enabling administrators to perform CRUD operations (create, read, update, delete) on products. This admin section is secured with authentication and authorization to ensure that only authorized users can access it.
-
-The platform supports secure image uploads, allowing administrators to upload product images that are stored and served efficiently to optimize performance. Users can take advantage of the robust search functionality to find products by name, category, or brand, complete with autocomplete suggestions and advanced filtering options.
-
-PC-Store features a dedicated "Contact Us" page where users can contact support and view company details, with a form for submitting inquiries and feedback.
+* Product Catalog: Browse and search for products with details such as name, brand, category, price, and images.
+* Admin Dashboard: Perform CRUD operations on products with authentication and authorization.
+* Image Uploads: Securely upload and manage product images.
+* Search Functionality: Find products by name, category, or brand with autocomplete suggestions and advanced filtering options.
+* Shopping Cart: Add products and printers to the cart, view quantities and totals, and manage cart items.
+* Contact Page: Contact support and view company details, with a form for submitting inquiries and feedback.
 
 Tech Stack
-
-The frontend of PC-Store is built using React, a popular library for creating user interfaces, along with Material-UI for material design components and React Router for routing. The backend is powered by Spring Boot, a framework that simplifies the development of Java-based backend applications, and Spring Data JPA for database interactions and object-relational mapping. The application uses MySQL as its relational database management system.
+* Frontend: React, Material-UI, React Router
+* Backend: Spring Boot, Spring Data JPA
+* Database: MySQL
+* Other Tools: Multer for file uploads
 
 Challenges & Learnings
 
-Integrating React with Spring Boot was a significant challenge, particularly in managing state and ensuring efficient communication between the frontend and backend. This process involved overcoming CORS issues and optimizing API endpoints for better performance.
+  Integrating React with Spring Boot presented several challenges, 
+  * including managing state and ensuring efficient communication between the frontend and backend. 
+  * Overcoming CORS issues and optimizing API endpoints for better performance were key areas of focus.
+
+Installation
+
+To run this project locally, follow these steps:
+* Clone the repository:
+  * git clone https://github.com/chamudithaNinety9/pcstore-react.git
+  * cd pcstore-react
+    
+* Backend Setup:
+  * Ensure you have Java and Maven installed.
+  * Navigate to the backend directory and run:
+      * mvn install
+      * mvn spring-boot:run
+    
+Frontend Setup:
+* Ensure you have Node.js and npm installed.
+* Navigate to the frontend directory and run:
+    - npm install
+    - npm start
