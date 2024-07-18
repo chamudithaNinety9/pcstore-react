@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useCart } from '../context/CartContext'; // Importing CartContext to access cart functionality
+import { Link } from 'react-router-dom';
 import '../styles.css'; // Importing the combined styles
 
 const Printers = () => {
     const [printers, setPrinters] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredPrinters, setFilteredPrinters] = useState([]);
+    const { addItemToCart } = useCart(); // Access addItemToCart function from CartContext
 
     useEffect(() => {
         fetch('http://localhost:8090/printers')
@@ -43,6 +46,10 @@ const Printers = () => {
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
+    };
+
+    const addToCart = (printer) => {
+        addItemToCart(printer); // Call addItemToCart function from CartContext
     };
 
     return (
@@ -84,6 +91,7 @@ const Printers = () => {
                             <td>
                                 <button onClick={() => window.location.href=`printers/edit/${printer.id}`}>Edit</button>
                                 <button onClick={() => handleDelete(printer.id)}>Delete</button>
+                                <button onClick={() => addItemToCart({ id: printer.id, name: printer.name, price: printer.price, type: 'printer' })}> Add to Cart </button>
                             </td>
                         </tr>
                     ))}

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import '../styles.css'; // Importing the combined styles
 
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
+    const { addItemToCart } = useCart(); // Access addItemToCart function from CartContext
 
     useEffect(() => {
         fetch('http://localhost:8090/products')
@@ -43,6 +46,10 @@ const Products = () => {
 
     const handleSearchChange = (event) => {
         setSearchQuery(event.target.value);
+    };
+
+    const addToCart = (product) => {
+        addItemToCart(product); 
     };
 
     return (
@@ -84,6 +91,7 @@ const Products = () => {
                             <td>
                                 <button onClick={() => window.location.href=`products/edit/${product.id}`}>Edit</button>
                                 <button onClick={() => handleDelete(product.id)}>Delete</button>
+                                <button onClick={() => addItemToCart({ id: product.id, name: product.name, price: product.price, type: 'product' })}> Add to Cart </button>
                             </td>
                         </tr>
                     ))}
