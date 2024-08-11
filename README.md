@@ -1,7 +1,8 @@
 PC-Store
 
-PC-Store is a full-stack e-commerce web application designed for buying and selling a variety of computer products, including laptops, desktops, peripherals, and accessories. 
-Built using Spring Boot for the backend and React for the frontend, PC-Store provides a seamless shopping experience with essential features for both customers.
+PC-Store is a full-stack e-commerce web application designed for buying and selling a variety of computer products, including laptops, printers, and accessories. 
+Built using Spring Boot for the backend and React for the frontend
+PC-Store provides a seamless shopping experience with essential features for both customers.
 
 Project Description
 
