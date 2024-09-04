@@ -19,7 +19,7 @@ Key Features
 
 Tech Stack
 * Frontend: React, Material-UI, React Router
-* Backend: Spring Boot, Spring Data JPA
+* Backend: Spring Boot, Spring Data JPA, Hibernate
 * Database: MySQL
 * Other Tools: Multer for file uploads
 
